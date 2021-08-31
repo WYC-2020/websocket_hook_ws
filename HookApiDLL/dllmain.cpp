@@ -203,6 +203,15 @@ BOOL APIENTRY DllMain(HMODULE hModule,
 	{
 	case DLL_PROCESS_ATTACH:
 	{
+		/*hook某个dll的接口*/
+		//DetourRestoreAfterWith();
+		//DetourTransactionBegin();
+		//DetourUpdateThread(GetCurrentThread());
+		//LPVOID g_pOldHTMLayoutProcND = DetourFindFunction("htmlayout.dll", "HTMLayoutProcND");
+		//DetourAttach(&g_pOldHTMLayoutProcND, MyHTMLayoutProcND);
+		//if (DetourTransactionCommit() == NO_ERROR)
+		//OutputDebugString(_T("MyHTMLayoutProcND detoured successfully"));
+
 		DetourRestoreAfterWith();
 		/*DetourTransactionBegin();
 		DetourUpdateThread(GetCurrentThread());
